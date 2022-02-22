@@ -69,34 +69,36 @@ echo 16. YURFitGorillaTag
 echo --------------------------
 echo          DEPENDENCIES
 echo --------------------------
-echo 17. Bannana Hook
-echo 18. BepInject
-echo 19. Extenject
-echo 20. TMPLoader
-echo 21. Utilla
+echo 17. BepInEx (REQUIRED FOR MODS PLEASE INSTALL THIS FIRST)
+echo 18. Bannana Hook
+echo 19. BepInject
+echo 20. Extenject
+echo 21. TMPLoader
+echo 22. Utilla
 echo.
 set /p csmi=" Mod to Install >>> "
 if '%csmi%'=='1' start Install\AirJump.bat
-if '%csmi%'=='2' echo yes
-if '%csmi%'=='3' echo yes
-if '%csmi%'=='4' echo yes
-if '%csmi%'=='5' echo yes
-if '%csmi%'=='6' echo yes
-if '%csmi%'=='7' echo yes
-if '%csmi%'=='8' echo yes
-if '%csmi%'=='9' echo yes
-if '%csmi%'=='10' echo yes
-if '%csmi%'=='11' echo yes
-if '%csmi%'=='12' echo yes
-if '%csmi%'=='13' echo yes
-if '%csmi%'=='14' echo yes
-if '%csmi%'=='15' echo yes
-if '%csmi%'=='16' echo yes
-if '%csmi%'=='17' echo yes
-if '%csmi%'=='18' echo yes
-if '%csmi%'=='19' echo yes
-if '%csmi%'=='20' echo yes
-if '%csmi%'=='21' echo yes
+if '%csmi%'=='2' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='3' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='4' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='5' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='6' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='7' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='8' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='9' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='10' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='11' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='12' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='13' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='14' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='15' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='16' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='17' start Install\BepInEx.bat
+if '%csmi%'=='18' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='19' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='20' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='21' echo Sorry! This Doesnt work yet!
+if '%csmi%'=='22' echo Sorry! This Doesnt work yet!
 goto home
 
 

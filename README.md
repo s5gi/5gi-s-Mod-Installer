@@ -9,11 +9,11 @@ This was made in batch to get people into coding. Be aware as this is the origin
 
 Finish Mod Installing support, 
 
-Compress down to one file for limited connections, 
-
 Add Public Mod Library for trusted mod creators.
 
 
 	COMPLETED:
 	
 Add Installation for BepInEx (Mod Engine), 
+
+Compress down to one file for limited connections

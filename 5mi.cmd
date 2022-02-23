@@ -14,17 +14,23 @@ echo       /	    /   /  /   /	   /
 echo ///////	    /    //    /	///////  (5gi's Mod Installer)
 echo.
 echo --------------------------
-echo 1. Steam
+echo 1. Steam (Issue with this will be fixed soon. for now please enter it in manually...)
 echo 2. Oculus Rift S Software
 echo 3. Custom Dir
 echo 4. Leave the Same. (Continue with previous stated dir)
 echo --------------------------
 echo.
 set /p txt=" What is the directory of Gorilla Tag? >>> "
+set steamdir="C:\Program Files (x86)\Steam\steamapps\common\Gorilla Tag"
+set oculusdir=C:\Program Files\Oculus\Software\Software\another-axiom-gorilla-tag
 if '%txt%'=='1' (
-goto home
+echo This is currently broken! Sorry!
+timeout 3
+goto prehome
 )
 if '%txt%'=='2' (
+if exist "dir.txt" (del dir.txt)
+echo %oculusdir% > "dir.txt"
 goto home
 )
 if '%txt%'=='3' (

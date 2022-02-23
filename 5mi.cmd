@@ -1,8 +1,11 @@
 @echo off
 if not exist "Install" (
-powershell -Command Invoke-WebRequest https://github.com/the5gi/5gi-s-Mod-Installer/raw/fetch/Install.zip -OutFile Install.zip
-tar -xf Install.zip
-echo please delete the zip folder!
+md Install
+powershell -Command Invoke-WebRequest https://github.com/the5gi/5gi-s-Mod-Installer/raw/fetch/BepInEx.zip -OutFile Install\BepInEx.zip
+cd Install
+tar -xf BepInEx.zip
+cd ..
+del /f Install\BepInEx.zip
 timeout 10
 )
 cls
@@ -59,58 +62,12 @@ echo ///////	    /  /    /  /	   /
 echo       /	    /   /  /   /	   /
 echo ///////	    /    //    /	///////  (5gi's Mod Installer)
 echo.
+echo Mod Library
 echo.
-echo Please Choose a mod to install. (Will automatically install dependencies if there are any)
-echo.
-echo 1. Airjump (Working)
-echo 2. Broken Controller
-echo 3. Computer Interface (Working)
-echo 4. Cosmetic Hider
-echo 5. Dash Monke
-echo 6. Gorilla Cosmetics
-echo 7. Monke Map Loader
-echo 8. Monke Swim
-echo 9. Monkey Trails
-echo 10. No Ambient
-echo 11. Power Arms
-echo 12. Practice Mod
-echo 13. Slippery Ice
-echo 14. Space Monke
-echo 15. Spectator Mod
-echo 16. YURFitGorillaTag
-echo --------------------------
-echo          DEPENDENCIES
-echo --------------------------
-echo 17. BepInEx (REQUIRED FOR MODS PLEASE INSTALL THIS FIRST) (Working)
-echo 18. Bannana Hook
-echo 19. BepInject (Working)
-echo 20. Extenject (Working)
-echo 21. TMPLoader
-echo 22. Utilla (Working)
+echo 1. BepInEx (Working)
 echo.
 set /p csmi=" Mod to Install >>> "
-if '%csmi%'=='1' start Install\AirJump.bat
-if '%csmi%'=='2' echo Sorry! This Doesnt work yet!
-if '%csmi%'=='3' start Install\ComputerInterface.bat
-if '%csmi%'=='4' echo Sorry! This Doesnt work yet!
-if '%csmi%'=='5' echo Sorry! This Doesnt work yet!
-if '%csmi%'=='6' echo Sorry! This Doesnt work yet!
-if '%csmi%'=='7' echo Sorry! This Doesnt work yet!
-if '%csmi%'=='8' echo Sorry! This Doesnt work yet!
-if '%csmi%'=='9' echo Sorry! This Doesnt work yet!
-if '%csmi%'=='10' echo Sorry! This Doesnt work yet!
-if '%csmi%'=='11' echo Sorry! This Doesnt work yet!
-if '%csmi%'=='12' echo Sorry! This Doesnt work yet!
-if '%csmi%'=='13' echo Sorry! This Doesnt work yet!
-if '%csmi%'=='14' echo Sorry! This Doesnt work yet!
-if '%csmi%'=='15' echo Sorry! This Doesnt work yet!
-if '%csmi%'=='16' echo Sorry! This Doesnt work yet!
-if '%csmi%'=='17' start Install\BepInEx.bat
-if '%csmi%'=='18' echo Sorry! This Doesnt work yet!
-if '%csmi%'=='19' start Install\Bepinject.bat
-if '%csmi%'=='20' start Install\Extenject.bat
-if '%csmi%'=='21' echo Sorry! This Doesnt work yet!
-if '%csmi%'=='22' start Install\Utilla.bat
+if '%csmi%'=='1' start Install\BepInEx.bat
 goto home
 
 

@@ -1,11 +1,17 @@
 @echo off
+if not exist "Install" (
+powershell -Command Invoke-WebRequest https://github.com/the5gi/5gi-s-Mod-Installer/raw/fetch/Install.zip -OutFile Install.zip
+tar -xf Install.zip
+echo please delete the zip folder!
+timeout 10
+)
 cls
 title 5gi's Mod Installer
 goto prehome
 
 :prehome
 cls
-title 5gi's Mod Installer / Are you sure?
+title 5gi's Mod Installer / Confirm Directory
 echo.
 echo ///////	    //        //	///////
 echo /      	    / /      / /	   /

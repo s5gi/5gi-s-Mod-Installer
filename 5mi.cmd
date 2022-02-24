@@ -70,6 +70,10 @@ echo.   		Mods
 echo --------------------------
 echo 2. AirJump by fchb1239 (Platforms)
 echo 3. ComputerInterface by ToniMacoroni
+echo.
+echo          Dependencies
+echo --------------------------
+echo 4. BepInEx/Extenject by Auros and svermeulen
 echo --------------------------
 echo.
 set /p csmi=" Mod to Install >>> "
@@ -88,7 +92,10 @@ start Install\ComputerInterface.bat
 start Install\Extenject.bat
 start Install\Bepinject.bat
 )
-
+if '%csmi%'=='4' (
+start Install\Extenject.bat
+start Install\Bepinject.bat
+)
 
 goto home
 

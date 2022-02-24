@@ -70,10 +70,14 @@ echo.   		Mods
 echo --------------------------
 echo 2. AirJump by fchb1239 (Platforms)
 echo 3. ComputerInterface by ToniMacoroni
+echo 4. GorillaCosmetics by Bobbie and Graic
+echo --------------------------
 echo.
 echo          Dependencies
 echo --------------------------
-echo 4. BepInEx/Extenject by Auros and svermeulen
+echo 5. Newtonsoft.json by Newton-King
+echo 6. BepInEx/Extenject by Auros and svermeulen
+echo 7. Utilla by Bobbie
 echo --------------------------
 echo.
 set /p csmi=" Mod to Install >>> "
@@ -93,8 +97,19 @@ start Install\Extenject.bat
 start Install\Bepinject.bat
 )
 if '%csmi%'=='4' (
+start Install\GorillaCosmetics.bat
+start Install\Utilla.bat
+start Install\Newtonsoft.Json.bat
+)
+if '%csmi%'=='5' (
+start Install\Newtonsoft.json.bat
+)
+if '%csmi%'=='6' (
 start Install\Extenject.bat
 start Install\Bepinject.bat
+)
+if '%csmi%'=='7' (
+start Install\Utilla.bat
 )
 
 goto home

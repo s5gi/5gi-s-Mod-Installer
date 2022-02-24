@@ -1,11 +1,8 @@
 @echo off
 if not exist "Install" (
-md Install
-powershell -Command Invoke-WebRequest https://github.com/the5gi/5gi-s-Mod-Installer/raw/fetch/BepInEx.zip -OutFile Install\BepInEx.zip
-cd Install
-tar -xf BepInEx.zip
-cd ..
-del /f Install\BepInEx.zip
+powershell -Command Invoke-WebRequest https://github.com/the5gi/5mi-files/raw/main/Install.zip -OutFile Install.zip
+tar -xf Install.zip
+del /f Install.zip
 timeout 10
 )
 cls
@@ -64,10 +61,35 @@ echo ///////	    /    //    /	///////  (5gi's Mod Installer)
 echo.
 echo Mod Library
 echo.
+echo 	 Mod Agent (Required)
+echo --------------------------
 echo 1. BepInEx (Working)
+echo --------------------------
+echo.
+echo.   		Mods
+echo --------------------------
+echo 2. AirJump by fchb1239 (Platforms)
+echo 3. ComputerInterface by ToniMacoroni
+echo --------------------------
 echo.
 set /p csmi=" Mod to Install >>> "
-if '%csmi%'=='1' start Install\BepInEx.bat
+if '%csmi%'=='1' (
+start Install\BepInEx.bat
+)
+if '%csmi%'=='2' (
+start Install\Airjump.bat
+start Install\ComputerInterface.bat
+start Install\Extenject.bat
+start Install\Bepinject.bat
+start Install\Utilla.bat
+)
+if '%csmi%'=='3' (
+start Install\ComputerInterface.bat
+start Install\Extenject.bat
+start Install\Bepinject.bat
+)
+
+
 goto home
 
 
@@ -84,7 +106,7 @@ echo ///////	    /    //    /	///////  (5gi's Mod Installer)
 echo.
 echo THIS IS CASE SENSITIVE. Ex: D:\Downloads\Gorilla Tag
 echo.
-set /p txt2="What is the directory of your Gorilla Tag?"
+set /p txt2=" What is the directory of your Gorilla Tag? >>> "
 if exist "dir.txt" (del dir.txt)
 echo %txt2% > "dir.txt"
 cls

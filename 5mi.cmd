@@ -32,26 +32,16 @@ goto prehome
 	echo.
 	
 	set /p txt=" What is the directory of Gorilla Tag? >>> "
-	set steamdir=C:\Program Files ")"\
-	set steamdir=C:\Program Files \
-	set steamdir3=C:\Program Files ^)\
-	set steamdir4=C:\Program Files )\
-	
-	echo %steamdir%
-	pause
-	
-	::\Steam\steamapps\common\Gorilla Tag
-	set oculusdir=C:\Program Files\Oculus\Software\Software\another-axiom-gorilla-tag
 	
 	if %txt% == 1 (
 		if exist "dir.txt" (del dir.txt)
-		echo %steamdir% > "dir.txt"
+		echo C:\Program Files (x86^)\Steam\steamapps\common\Gorilla Tag >> dir.txt
 		goto home
 	)
 	
 	if %txt% == 2 (
 		if exist "dir.txt" (del dir.txt)
-		echo %oculusdir% > "dir.txt"
+		echo C:\Program Files\Oculus\Software\Software\another-axiom-gorilla-tag >> dir.txt
 		goto home
 	)
 	

@@ -4,13 +4,13 @@ powershell -Command Invoke-WebRequest https://github.com/the5gi/5mi-files/raw/ma
 tar -xf Install.zip
 del /f Install.zip
 timeout 10
+goto prehome
 )
 cls
 title 5gi's Mod Installer
 goto prehome
 
 :prehome
-set /p dir=< dir.txt
 cls
 title 5gi's Mod Installer / Confirm Directory
 echo.
@@ -19,8 +19,6 @@ echo /      	    / /      / /	   /
 echo ///////	    /  /    /  /	   /
 echo       /	    /   /  /   /	   /
 echo ///////	    /    //    /	///////  (5gi's Mod Installer)
-echo.
-echo Current Directory >>> %dir%
 echo.
 echo --------------------------
 echo 1. Steam (Issue with this will be fixed soon. for now please enter it in manually...)
@@ -48,7 +46,6 @@ goto customdir
 if '%txt%'=='4' (
 goto home
 )
-
 
 
 

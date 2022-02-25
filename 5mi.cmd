@@ -10,6 +10,7 @@ title 5gi's Mod Installer
 goto prehome
 
 :prehome
+set /p dir=< dir.txt
 cls
 title 5gi's Mod Installer / Confirm Directory
 echo.
@@ -18,6 +19,8 @@ echo /      	    / /      / /	   /
 echo ///////	    /  /    /  /	   /
 echo       /	    /   /  /   /	   /
 echo ///////	    /    //    /	///////  (5gi's Mod Installer)
+echo.
+echo Current Directory >>> %dir%
 echo.
 echo --------------------------
 echo 1. Steam (Issue with this will be fixed soon. for now please enter it in manually...)
@@ -71,13 +74,20 @@ echo --------------------------
 echo 2. AirJump by fchb1239 (Platforms)
 echo 3. ComputerInterface by ToniMacoroni
 echo 4. GorillaCosmetics by Bobbie and Graic
+echo 5. DashMonke by Frogrilla
+echo 6. HauntedModMenu by A Haunted Army
+echo 7. IronMonke by BZZZ The 18th
+echo 8. MonkeMapLoader by Vadix
+echo 9. PowerArms by A Haunted Army
+echo 10. SlipperyIce by fchb1239
+echo 11. SpaceMonke by Bobbie
 echo --------------------------
 echo.
 echo          Dependencies
 echo --------------------------
-echo 5. Newtonsoft.json by Newton-King
-echo 6. BepInEx/Extenject by Auros and svermeulen
-echo 7. Utilla by Bobbie
+echo 12. Newtonsoft.json by Newton-King
+echo 13. BepInEx/Extenject by Auros and svermeulen
+echo 14. Utilla by Bobbie
 echo --------------------------
 echo.
 set /p csmi=" Mod to Install >>> "
@@ -102,13 +112,48 @@ start Install\Utilla.bat
 start Install\Newtonsoft.Json.bat
 )
 if '%csmi%'=='5' (
-start Install\Newtonsoft.json.bat
+start Install\DashMonke.bat
+start Install\Utilla.bat
 )
 if '%csmi%'=='6' (
+start Install\HauntedModMenu.bat
+start Install\Utilla
+)
+if '%csmi%'=='7' (
+start Install\IronMonke
+start Install\Utilla.bat
+)
+if '%csmi%'=='8' (
+start Install\MonkeMapLoader.bat
+start Install\Bepinject.bat
+start Install\ComputerInterface.bat
+start Install\Extenject.bat
+start Install\Newtonsoft.json.bat
+start Install\Utilla.bat
+)
+if '%csmi%'=='9' (
+start Install\Powerarms.bat
+start Install\Utilla.bat
+)
+if '%csmi%'=='10' (
+start Install\SlipperyIce.bat
+start Install\Bepinject.bat
+start Install\ComputerInterface.bat
+start Install\Extenject.bat
+start Install\Utilla.bat
+)
+if '%csmi%'=='11' (
+start Install\SpaceMonke.bat
+start Install\Utilla
+)
+if '%csmi%'=='12' (
+start Install\Newtonsoft.json.bat
+)
+if '%csmi%'=='13' (
 start Install\Extenject.bat
 start Install\Bepinject.bat
 )
-if '%csmi%'=='7' (
+if '%csmi%'=='14' (
 start Install\Utilla.bat
 )
 
